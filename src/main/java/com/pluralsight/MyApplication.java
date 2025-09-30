@@ -1,0 +1,76 @@
+package com.pluralsight;
+
+import java.util.Scanner;
+
+public class MyApplication {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        getName();
+        getAge();
+        voteAge(24);
+        nameage("Prince", 24);
+        System.out.println("What's your name?");
+        String username = scanner.nextLine();
+        usernameAlice(username);
+        System.out.println("What's your name?");
+        String username1 = scanner.nextLine();
+        System.out.println("What's your age?");
+        int age21 = scanner.nextInt();
+        scanner.nextLine();
+        usernameBobAnd21(username1, age21);
+        squareRoot();}
+
+    public static String getName() {
+        String name;
+        System.out.println("What's your name?");
+        name = scanner.nextLine();
+        return name;
+    }
+
+    public static int getAge() {
+        int age;
+        System.out.println("What's your age?");
+        age = scanner.nextInt();
+        scanner.nextLine();
+        return age;
+    }
+
+    public static int voteAge(int age) {
+        if (age >= 18) {
+            System.out.println("You are old enough to vote!");
+        } else {
+            System.out.println("Too young to vote...");
+        }
+        return age;
+    }
+
+    public static void nameage(String name, int age) {
+        System.out.println(name + "! " + "You are" + " " + age);
+    }
+
+    public static String usernameAlice(String username) {
+        if (username.equalsIgnoreCase("Alice")) {
+            System.out.println("Welcome, Alice");
+        } else {
+            System.out.println("Hello!");
+        }
+        return username;
+    }
+    public static void usernameBobAnd21(String username1, int age21){
+        if (username1.equalsIgnoreCase("Bob") && age21 >= 21){
+            System.out.println("You can drink");
+        }else{
+            System.out.println("Not old enough to drink");
+        }
+    }
+    public static int squareRoot(){
+        int number;
+        System.out.println("Give me a number");
+        number = scanner.nextInt();
+        scanner.nextLine();
+        double result = Math.sqrt(number);
+        System.out.println(result);
+        return number;
+    }
+}
