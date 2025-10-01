@@ -19,7 +19,10 @@ public class MyApplication {
         int age21 = scanner.nextInt();
         scanner.nextLine();
         usernameBobAnd21(username1, age21);
-        squareRoot();}
+        squareRoot();
+        integers(5, 7);
+        equalsLara();
+    }
 
     public static String getName() {
         String name;
@@ -72,5 +75,34 @@ public class MyApplication {
         double result = Math.sqrt(number);
         System.out.println(result);
         return number;
+    }
+    public static void printWelcomeMessage(String username){
+switch (username){
+    case "Alice":
+        System.out.println("Welcome, Alice");
+        break;
+    case "Bob":
+        System.out.println("Do you want to get a drink?");
+        break;
+    default:
+        System.out.println("Hello");
+        break;
+}
+    }
+    public static boolean integers(int one, int two) {
+        if (one > two) {
+            System.out.println(one + " " + ">" + " " + two);
+            return true;
+        } else {
+            System.out.println(two + " " + ">" + " " + one);
+            return false;
+        }
+    }
+    public static String equalsLara() {
+        System.out.println("What's your name?");
+        String name3 = scanner.nextLine();
+        String message = name3.equalsIgnoreCase("Lara") ? "You are not welcomed, Lara" : "Welcome!";
+        System.out.println(message);
+        return name3;
     }
 }
