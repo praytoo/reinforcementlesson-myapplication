@@ -22,6 +22,10 @@ public class MyApplication {
         squareRoot();
         integers(5, 7);
         equalsLara();
+        whichIsLarger(90, 60);
+        int number = randomNr();
+        System.out.println("Random number: " + number);
+        whichIsSmaller(3,6);
     }
 
     public static String getName() {
@@ -105,4 +109,19 @@ switch (username){
         System.out.println(message);
         return name3;
     }
+    public static int whichIsLarger(int one1, int two2){
+    int whichIsLarger = Math.max(one1, two2);
+        System.out.println(Math.max(one1, two2));
+        return whichIsLarger;
+    }
+    public static int randomNr(){
+     int randomNr = (int) (Math.random()* 10);
+     return randomNr;
+        }
+
+    public static int whichIsSmaller(int one11, int two22){
+    int whichIsSmaller = Math.min(one11, two22);
+    System.out.println(Math.min(one11, two22));
+    return whichIsSmaller;
+}
 }
